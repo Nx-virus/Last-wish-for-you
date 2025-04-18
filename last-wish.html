@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Dare</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f8f8f8;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-top: 30px;
+        }
+        
+        h1 {
+            color: #e74c3c;
+            margin-bottom: 30px;
+        }
+        
+        .message {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        
+        .signature {
+            font-style: italic;
+            margin-top: 30px;
+            color: #7f8c8d;
+        }
+        
+        .hearts {
+            font-size: 24px;
+            color: #e74c3c;
+            margin: 20px 0;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+            100% { transform: scale(1); }
+        }
+        
+        button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #c0392b;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #95a5a6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday Dare</h1>
+        
+        <div class="hearts">❤️</div>
+        
+        <div class="message">
+            <p>Dare bolle ekn vul hobe...ekn ami tmk grhina kori...ha tototuku grhina kori jototuku grhina ami amr babar khuni k kori....baba chilo amr ma er future... Take khun kore se amr ma er future nosto korce....r tmk valobese amr future dhongso hoice...na ami tmk kivabe dosh dibo?oije ekta kotha ache jano!kata k kivabe dosh di?kata toh tar jaigai e chilo pa toh ami rkcilm.....dekho...tmk na pawya kosto ekn amr r nei......ami puro elo melo hoiye gechilm... Nijeke ses kore dichilm....nijeke dekle nijer kachei ocena mone hoto.....na kheye nijer jotno na niye....ami dhongso hoiye gechilm....but recently 02 tarik e ami abr come back korci.....r asa korci....ekn theke....lifr ta sajano guchalo vabe colbe....r jai hok tmk moto.... Kawk ami r ei sundor life ta tule dibo na dhongso korar jonno.....tmr moto girgiti k valobasate amr kono ufsos nai.....jano amr afsos ektai.....ami......buje sune....etto gula rltn er por jake valobaslm....jake niye ami amr hole life Spend er sopno deklm ses obdi kina se lesbian holo...dam.....amr r kono life a asa nei...nijer proti ekn amr jhok....amr cawya ektai.......tmr moto girgitir muk amr jeno r dekte na hok.......</p>
+        </div>
+        
+        <div class="signature">
+            <p>Tnk you a lot<br>Ones again<br>Happy Birthday....petni(dead)</p>
+        </div>
+        
+        <button id="showMore">Show Special Message</button>
+        
+        <div id="specialMessage" class="hidden">
+            <p>ভালোবাসার কখনো মৃত্যু হয়না,৩ মিনিট বা ৩ বছর সেটা বড় না তবে ভালোতো আমি তোমাকে বেসেছিলাম।তবে তুমি সেই ভালোবাসা পাওয়ার যোগ্য না।ধন্যবাদ! </p>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>From my side,this is the last wish for you</p>
+    </div>
+    
+    <script>
+        document.getElementById('showMore').addEventListener('click', function() {
+            const message = document.getElementById('specialMessage');
+            const button = document.getElementById('showMore');
+            
+            if (message.classList.contains('hidden')) {
+                message.classList.remove('hidden');
+                button.textContent = 'Hide Message';
+            } else {
+                message.classList.add('hidden');
+                button.textContent = 'Show Special Message';
+            }
+        });
+        
+        // Animate hearts
+        const hearts = document.querySelector('.hearts');
+        setInterval(() => {
+            hearts.style.animation = 'none';
+            setTimeout(() => {
+                hearts.style.animation = 'pulse 1.5s infinite';
+            }, 10);
+        }, 3000);
+    </script>
+</body>
+</html>
